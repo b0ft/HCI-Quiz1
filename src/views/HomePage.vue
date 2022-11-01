@@ -5,7 +5,7 @@
             <ion-grid>
                 <ion-row>
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Kolam</ion-card-title>
                                 <ion-card-subtitle>10</ion-card-subtitle>
@@ -13,7 +13,7 @@
                         </ion-card>
                     </ion-col>
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Kolam Aktif</ion-card-title>
                                 <ion-card-subtitle>10</ion-card-subtitle>
@@ -21,7 +21,7 @@
                         </ion-card></ion-col
                     >
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Ikan Hidup</ion-card-title>
                                 <ion-card-subtitle
@@ -34,7 +34,7 @@
                         </ion-card></ion-col
                     >
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Ikan Mati</ion-card-title>
                                 <ion-card-subtitle
@@ -47,7 +47,7 @@
                         </ion-card></ion-col
                     >
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Panen 2022</ion-card-title>
                                 <ion-card-subtitle
@@ -60,7 +60,7 @@
                         </ion-card></ion-col
                     >
                     <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
+                        <ion-card style="border-radius: 14px" color="dark">
                             <ion-card-header>
                                 <ion-card-title>Total Pakan</ion-card-title>
                                 <ion-card-subtitle
@@ -80,7 +80,10 @@
                     <ion-grid>
                         <ion-row>
                             <ion-col size="6">
-                                <ion-card color="dark">
+                                <ion-card
+                                    style="border-radius: 14px"
+                                    color="dark"
+                                >
                                     <img
                                         alt="Silhouette of mountains"
                                         src="/assets/nila.png"
@@ -97,7 +100,10 @@
                                 </ion-card>
                             </ion-col>
                             <ion-col size="6" style="margin-left: 0rem">
-                                <ion-card color="dark">
+                                <ion-card
+                                    style="border-radius: 14px"
+                                    color="dark"
+                                >
                                     <img
                                         alt="Silhouette of mountains"
                                         src="/assets/nila.png"
@@ -125,7 +131,10 @@
                     ><ion-grid>
                         <ion-row>
                             <ion-col size="6" size-md="4" size-lg="2">
-                                <ion-card color="dark">
+                                <ion-card
+                                    style="border-radius: 14px"
+                                    color="dark"
+                                >
                                     <ion-card-header>
                                         <ion-card-subtitle
                                             >pH</ion-card-subtitle
@@ -146,7 +155,10 @@
                                 </ion-card>
                             </ion-col>
                             <ion-col size="6" size-md="4" size-lg="2">
-                                <ion-card color="dark">
+                                <ion-card
+                                    style="border-radius: 14px"
+                                    color="dark"
+                                >
                                     <ion-card-header>
                                         <ion-card-subtitle
                                             >DO</ion-card-subtitle
@@ -191,7 +203,7 @@ export default defineComponent({
 
 <style scoped>
 #container {
-    text-align: center;
+    /* text-align: center; */
 
     position: absolute;
     left: 0;
@@ -221,6 +233,10 @@ export default defineComponent({
 ion-card-subtitle {
     font-size: 2rem;
     font-weight: bold;
+}
+
+ion-slide {
+    text-align: left;
 }
 
 #subsub {

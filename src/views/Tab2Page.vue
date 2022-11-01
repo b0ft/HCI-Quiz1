@@ -46,7 +46,11 @@
                                         ></ion-col
                                     >
                                 </ion-row>
-                                <ion-row class="ion-align-items-center">
+
+                                <ion-row
+                                    class="ion-align-items-center"
+                                    style="margin-top: 10px"
+                                >
                                     <ion-col class="ion-text-start" size="auto"
                                         ><ion-img
                                             src="assets/img/calendar.svg"
@@ -124,7 +128,10 @@
                                         ></ion-col
                                     >
                                 </ion-row>
-                                <ion-row class="ion-align-items-center">
+                                <ion-row
+                                    class="ion-align-items-center"
+                                    style="margin-top: 10px"
+                                >
                                     <ion-col class="ion-text-start" size="auto"
                                         ><ion-img
                                             src="assets/img/calendar.svg"
@@ -202,7 +209,10 @@
                                         ></ion-col
                                     >
                                 </ion-row>
-                                <ion-row class="ion-align-items-center">
+                                <ion-row
+                                    class="ion-align-items-center"
+                                    style="margin-top: 10px"
+                                >
                                     <ion-col class="ion-text-start" size="auto"
                                         ><ion-img
                                             src="assets/img/calendar.svg"
@@ -280,7 +290,10 @@
                                         ></ion-col
                                     >
                                 </ion-row>
-                                <ion-row class="ion-align-items-center">
+                                <ion-row
+                                    class="ion-align-items-center"
+                                    style="margin-top: 10px"
+                                >
                                     <ion-col class="ion-text-start" size="auto"
                                         ><ion-img
                                             src="assets/img/calendar.svg"
@@ -358,7 +371,10 @@
                                         ></ion-col
                                     >
                                 </ion-row>
-                                <ion-row class="ion-align-items-center">
+                                <ion-row
+                                    class="ion-align-items-center"
+                                    style="margin-top: 10px"
+                                >
                                     <ion-col class="ion-text-start" size="auto"
                                         ><ion-img
                                             src="assets/img/calendar.svg"
@@ -415,8 +431,8 @@
                 </ion-item>
             </ion-list>
             <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                <ion-fab-button>
-                    <ion-icon :icon="add"></ion-icon>
+                <ion-fab-button color="tertiary">
+                    <ion-icon :icon="add" style="font-size: 50px"></ion-icon>
                 </ion-fab-button>
             </ion-fab>
         </ion-content>
