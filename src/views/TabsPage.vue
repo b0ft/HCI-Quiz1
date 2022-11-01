@@ -5,12 +5,10 @@
             <ion-tab-bar slot="bottom">
                 <ion-tab-button tab="tab1" href="/tabs/tab1">
                     <ion-icon :icon="home" />
-                    <ion-label>Tab 1</ion-label>
                 </ion-tab-button>
 
                 <ion-tab-button tab="tab2" href="/tabs/tab2">
-                    <ion-icon :icon="fish" />
-                    <ion-label>Tab 2</ion-label>
+                    <ion-icon src="assets/img/pond.svg" />
                 </ion-tab-button>
             </ion-tab-bar>
         </ion-tabs>
@@ -23,7 +21,6 @@ import {
     IonTabBar,
     IonTabButton,
     IonTabs,
-    IonLabel,
     IonIcon,
     IonPage,
     IonRouterOutlet,
@@ -33,7 +30,6 @@ import { home, fish } from "ionicons/icons";
 export default defineComponent({
     name: "TabsPage",
     components: {
-        IonLabel,
         IonTabs,
         IonTabBar,
         IonTabButton,

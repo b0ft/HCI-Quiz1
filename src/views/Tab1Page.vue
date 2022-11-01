@@ -75,86 +75,102 @@
                 </ion-row>
             </ion-grid>
             <h1 id="judul">TOTAL BERAT IKAN</h1>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="6">
-                        <ion-card color="dark">
-                            <img
-                                alt="Silhouette of mountains"
-                                src="/assets/nila.png"
-                            />
-                            <ion-card-header>
-                                <ion-card-title style="font-weight: bold"
-                                    >LELE</ion-card-title
-                                >
-                                <ion-card-title style="color: #2c96f1"
-                                    >200 Kg</ion-card-title
-                                >
-                            </ion-card-header>
-                        </ion-card>
-                    </ion-col>
-                    <ion-col size="6" style="margin-left: 0rem">
-                        <ion-card color="dark">
-                            <img
-                                alt="Silhouette of mountains"
-                                src="/assets/nila.png"
-                                style="height: rem"
-                            />
-                            <ion-card-header>
-                                <ion-card-title style="font-weight: bold"
-                                    >NILA MERAH</ion-card-title
-                                >
-                                <ion-card-title style="color: #2c96f1"
-                                    >200 Kg</ion-card-title
-                                >
-                            </ion-card-header>
-                        </ion-card></ion-col
-                    >
-                </ion-row>
-            </ion-grid>
+            <ion-slides>
+                <ion-slide>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="6">
+                                <ion-card color="dark">
+                                    <img
+                                        alt="Silhouette of mountains"
+                                        src="/assets/nila.png"
+                                    />
+                                    <ion-card-header>
+                                        <ion-card-title
+                                            style="font-weight: bold"
+                                            >LELE</ion-card-title
+                                        >
+                                        <ion-card-title style="color: #2c96f1"
+                                            >200 Kg</ion-card-title
+                                        >
+                                    </ion-card-header>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col size="6" style="margin-left: 0rem">
+                                <ion-card color="dark">
+                                    <img
+                                        alt="Silhouette of mountains"
+                                        src="/assets/nila.png"
+                                        style="height: rem"
+                                    />
+                                    <ion-card-header>
+                                        <ion-card-title
+                                            style="font-weight: bold"
+                                            >NILA MERAH</ion-card-title
+                                        >
+                                        <ion-card-title style="color: #2c96f1"
+                                            >200 Kg</ion-card-title
+                                        >
+                                    </ion-card-header>
+                                </ion-card></ion-col
+                            >
+                        </ion-row>
+                    </ion-grid>
+                </ion-slide>
+            </ion-slides>
+
             <h1 id="judul">KUALITAS AIR</h1>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
-                            <ion-card-header>
-                                <ion-card-subtitle>pH</ion-card-subtitle>
-                                <ion-card-title
-                                    >Normal
-                                    <span style="color: #2c96f1"
-                                        >6 Kolam</span
-                                    ></ion-card-title
-                                >
-                                <ion-card-title
-                                    >Abnormal
-                                    <span style="color: #2c96f1"
-                                        >6 Kolam</span
-                                    ></ion-card-title
-                                >
-                            </ion-card-header>
-                        </ion-card>
-                    </ion-col>
-                    <ion-col size="6" size-md="4" size-lg="2">
-                        <ion-card color="dark">
-                            <ion-card-header>
-                                <ion-card-subtitle>DO</ion-card-subtitle>
-                                <ion-card-title
-                                    >Normal
-                                    <span style="color: #2c96f1"
-                                        >6 Kolam</span
-                                    ></ion-card-title
-                                >
-                                <ion-card-title
-                                    >Abnormal
-                                    <span style="color: #2c96f1"
-                                        >6 Kolam</span
-                                    ></ion-card-title
-                                >
-                            </ion-card-header>
-                        </ion-card>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+            <ion-slides>
+                <ion-slide
+                    ><ion-grid>
+                        <ion-row>
+                            <ion-col size="6" size-md="4" size-lg="2">
+                                <ion-card color="dark">
+                                    <ion-card-header>
+                                        <ion-card-subtitle
+                                            >pH</ion-card-subtitle
+                                        >
+                                        <ion-card-title
+                                            >Normal
+                                            <span style="color: #2c96f1"
+                                                >6 Kolam</span
+                                            ></ion-card-title
+                                        >
+                                        <ion-card-title
+                                            >Abnormal
+                                            <span style="color: #2c96f1"
+                                                >6 Kolam</span
+                                            ></ion-card-title
+                                        >
+                                    </ion-card-header>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col size="6" size-md="4" size-lg="2">
+                                <ion-card color="dark">
+                                    <ion-card-header>
+                                        <ion-card-subtitle
+                                            >DO</ion-card-subtitle
+                                        >
+                                        <ion-card-title
+                                            >Normal
+                                            <span style="color: #2c96f1"
+                                                >6 Kolam</span
+                                            ></ion-card-title
+                                        >
+                                        <ion-card-title
+                                            >Abnormal
+                                            <span style="color: #2c96f1"
+                                                >6 Kolam</span
+                                            ></ion-card-title
+                                        >
+                                    </ion-card-header>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-slide>
+            </ion-slides>
+
             <div id="container"></div>
         </ion-content>
     </ion-page>
