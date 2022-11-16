@@ -23,7 +23,7 @@
                 </ion-row>
             </ion-grid>
             <ion-list>
-                <ion-item>
+                <ion-item v-for="(item, index) in data" :key="index">
                     <ion-card color="dark" style="border-radius: 16px">
                         <ion-card-header>
                             <ion-grid>
@@ -32,7 +32,9 @@
                                     style="border-bottom: 2px solid black"
                                 >
                                     <ion-col id="card-title"
-                                        ><strong>Alpha</strong></ion-col
+                                        ><strong>{{
+                                            item.alias
+                                        }}</strong></ion-col
                                     >
                                     <ion-col class="ion-text-end"
                                         ><ion-badge
@@ -42,7 +44,11 @@
                                                 font-size: 16px;
                                                 border-radius: 10px;
                                             "
-                                            >Aktif</ion-badge
+                                            >{{
+                                                item.isActive
+                                                    ? "Aktif"
+                                                    : "Tidak Aktif"
+                                            }}</ion-badge
                                         ></ion-col
                                     >
                                 </ion-row>
@@ -63,7 +69,9 @@
                                     <ion-col
                                         class="ion-text-start"
                                         style="font-size: 16px"
-                                        >01-09-2022</ion-col
+                                        >{{
+                                            item.build_at.toLocaleString()
+                                        }}</ion-col
                                     >
                                 </ion-row>
                                 <ion-row class="ion-align-items-center">
@@ -95,331 +103,7 @@
                                     <ion-col
                                         class="ion-text-start"
                                         style="font-size: 16px"
-                                        >200 Ekor</ion-col
-                                    >
-                                </ion-row>
-                            </ion-grid>
-
-                            <!-- <ion-card-title>Kolam</ion-card-title>
-                            <ion-card-subtitle>10</ion-card-subtitle> -->
-                        </ion-card-header>
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card color="dark" style="border-radius: 16px">
-                        <ion-card-header>
-                            <ion-grid>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="border-bottom: 2px solid black"
-                                >
-                                    <ion-col id="card-title" class="ion-te"
-                                        ><strong>Beta</strong></ion-col
-                                    >
-                                    <ion-col class="ion-text-end"
-                                        ><ion-badge
-                                            style="
-                                                background-color: #952229;
-                                                padding: 0.5rem;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                            "
-                                            >Tidak Aktif</ion-badge
-                                        ></ion-col
-                                    >
-                                </ion-row>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="margin-top: 10px"
-                                >
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/calendar.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >01-09-2022</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/timesheet.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >90 Hari</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/fish.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >200 Ekor</ion-col
-                                    >
-                                </ion-row>
-                            </ion-grid>
-
-                            <!-- <ion-card-title>Kolam</ion-card-title>
-                            <ion-card-subtitle>10</ion-card-subtitle> -->
-                        </ion-card-header>
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card color="dark" style="border-radius: 16px">
-                        <ion-card-header>
-                            <ion-grid>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="border-bottom: 2px solid black"
-                                >
-                                    <ion-col id="card-title"
-                                        ><strong>Charlie</strong></ion-col
-                                    >
-                                    <ion-col class="ion-text-end"
-                                        ><ion-badge
-                                            style="
-                                                background-color: green;
-                                                padding: 0.5rem;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                            "
-                                            >Aktif</ion-badge
-                                        ></ion-col
-                                    >
-                                </ion-row>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="margin-top: 10px"
-                                >
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/calendar.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >01-09-2022</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/timesheet.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >90 Hari</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/fish.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >200 Ekor</ion-col
-                                    >
-                                </ion-row>
-                            </ion-grid>
-
-                            <!-- <ion-card-title>Kolam</ion-card-title>
-                            <ion-card-subtitle>10</ion-card-subtitle> -->
-                        </ion-card-header>
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card color="dark" style="border-radius: 16px">
-                        <ion-card-header>
-                            <ion-grid>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="border-bottom: 2px solid black"
-                                >
-                                    <ion-col id="card-title"
-                                        ><strong>Delta</strong></ion-col
-                                    >
-                                    <ion-col class="ion-text-end"
-                                        ><ion-badge
-                                            style="
-                                                background-color: green;
-                                                padding: 0.5rem;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                            "
-                                            >Aktif</ion-badge
-                                        ></ion-col
-                                    >
-                                </ion-row>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="margin-top: 10px"
-                                >
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/calendar.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >01-09-2022</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/timesheet.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >90 Hari</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/fish.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >200 Ekor</ion-col
-                                    >
-                                </ion-row>
-                            </ion-grid>
-
-                            <!-- <ion-card-title>Kolam</ion-card-title>
-                            <ion-card-subtitle>10</ion-card-subtitle> -->
-                        </ion-card-header>
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card color="dark" style="border-radius: 16px">
-                        <ion-card-header>
-                            <ion-grid>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="border-bottom: 2px solid black"
-                                >
-                                    <ion-col id="card-title"
-                                        ><strong>Epsilon</strong></ion-col
-                                    >
-                                    <ion-col class="ion-text-end"
-                                        ><ion-badge
-                                            style="
-                                                background-color: green;
-                                                padding: 0.5rem;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                            "
-                                            >Aktif</ion-badge
-                                        ></ion-col
-                                    >
-                                </ion-row>
-                                <ion-row
-                                    class="ion-align-items-center"
-                                    style="margin-top: 10px"
-                                >
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/calendar.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >01-09-2022</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/timesheet.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >90 Hari</ion-col
-                                    >
-                                </ion-row>
-                                <ion-row class="ion-align-items-center">
-                                    <ion-col class="ion-text-start" size="auto"
-                                        ><ion-img
-                                            src="assets/img/fish.svg"
-                                            style="
-                                                width: 24px;
-                                                display: inline-block;
-                                            "
-                                        />
-                                    </ion-col>
-                                    <ion-col
-                                        class="ion-text-start"
-                                        style="font-size: 16px"
-                                        >200 Ekor</ion-col
+                                        >{{ item.id_int }} Ekor</ion-col
                                     >
                                 </ion-row>
                             </ion-grid>
@@ -440,19 +124,58 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { IonPage, IonContent } from "@ionic/vue";
+import { defineComponent, onMounted, ref } from "vue";
+import {
+    IonPage,
+    IonContent,
+    IonFabButton,
+    IonFab,
+    IonIcon,
+    IonList,
+    IonItem,
+    IonCard,
+    IonCardHeader,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonBadge,
+    IonImg,
+} from "@ionic/vue";
 import { add } from "ionicons/icons";
+import axios from "axios";
 
 export default defineComponent({
     name: "PondPage",
     components: {
         IonContent,
         IonPage,
+        IonFabButton,
+        IonFab,
+        IonIcon,
+        IonList,
+        IonItem,
+        IonCard,
+        IonCardHeader,
+        IonGrid,
+        IonRow,
+        IonCol,
+        IonBadge,
+        IonImg,
     },
     setup() {
+        const data = ref();
+
+        onMounted(async () => {
+            const response = await axios.get(
+                "http://jft.web.id/fishapi/api/ponds"
+            );
+            data.value = response.data;
+            console.log(response.data);
+        });
+
         return {
             add,
+            data,
         };
     },
 });

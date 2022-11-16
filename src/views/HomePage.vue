@@ -189,7 +189,19 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage } from "@ionic/vue";
+import {
+    IonContent,
+    IonPage,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonSlides,
+    IonSlide,
+    IonGrid,
+    IonRow,
+    IonCol,
+} from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -197,6 +209,15 @@ export default defineComponent({
     components: {
         IonContent,
         IonPage,
+        IonCard,
+        IonCardHeader,
+        IonCardSubtitle,
+        IonCardTitle,
+        IonSlides,
+        IonSlide,
+        IonGrid,
+        IonRow,
+        IonCol,
     },
 });
 </script>

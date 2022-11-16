@@ -129,9 +129,9 @@ import {
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 
-import { Storage } from '@ionic/storage';
+// import { Storage } from "@ionic/storage";
 
-
+// import axios from "axios";
 
 export default defineComponent({
     name: "HomePage",
@@ -174,9 +174,23 @@ export default defineComponent({
                 shape: this.shape,
                 material: this.material,
             };
+
             console.log(register);
-            const store = new Storage();
-            await store.create();
+            // const store = new Storage();
+            // await store.create();
+            // axios
+            //     .get("http://jft.web.id/fishapi/api/ponds")
+            //     .then(function (response) {
+            //         // handle success
+            //         console.log(response);
+            //     })
+            //     .catch(function (error) {
+            //         // handle error
+            //         console.log(error);
+            //     })
+            //     .finally(function () {
+            //         // always executed
+            //     });
         },
     },
 });
