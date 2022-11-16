@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from "@ionic/vue-router";
 import { RouteRecordRaw } from "vue-router";
 import TabsPage from "../views/TabsPage.vue";
 import HomePage from "../views/HomePage.vue";
+import PondPage from "../views/PondPage.vue";
 import PageSecond from "../views/Page2.vue";
+import RegisterPage from "../views/RegisterPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -23,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
             },
             {
                 path: "tab2",
-                component: () => import("@/views/Tab2Page.vue"),
+                component: () => import("@/views/PondPage.vue"),
             },
         ],
     },
@@ -35,6 +37,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "/page2",
         component: PageSecond,
+    },
+    {
+        path: "/register",
+        component: RegisterPage,
     },
 ];
 

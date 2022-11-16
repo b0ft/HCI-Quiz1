@@ -431,7 +431,7 @@
                 </ion-item>
             </ion-list>
             <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                <ion-fab-button color="tertiary">
+                <ion-fab-button color="tertiary" href="/register">
                     <ion-icon :icon="add" style="font-size: 50px"></ion-icon>
                 </ion-fab-button>
             </ion-fab>
@@ -445,7 +445,7 @@ import { IonPage, IonContent } from "@ionic/vue";
 import { add } from "ionicons/icons";
 
 export default defineComponent({
-    name: "Tab2Page",
+    name: "PondPage",
     components: {
         IonContent,
         IonPage,
