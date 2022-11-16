@@ -70,7 +70,7 @@
                                         class="ion-text-start"
                                         style="font-size: 16px"
                                         >{{
-                                            item.build_at.toLocaleString()
+                                            formatDate(item.build_at)
                                         }}</ion-col
                                     >
                                 </ion-row>
@@ -87,7 +87,10 @@
                                     <ion-col
                                         class="ion-text-start"
                                         style="font-size: 16px"
-                                        >90 Hari</ion-col
+                                        >{{
+                                            getDiffDateFromNow(item.build_at)
+                                        }}
+                                        Hari</ion-col
                                     >
                                 </ion-row>
                                 <ion-row class="ion-align-items-center">
@@ -161,6 +164,20 @@ export default defineComponent({
         IonCol,
         IonBadge,
         IonImg,
+    },
+    methods: {
+        formatDate(date: string) {
+            const d = new Date(date);
+            const month = d.getMonth() + 1;
+            const day = d.getDate();
+            const year = d.getFullYear();
+            return `${day}-${month}-${year}`;
+        },
+        getDiffDateFromNow(date: string) {
+            const d = new Date(date);
+            const diff = new Date().getTime() - d.getTime();
+            return Math.floor(diff / (1000 * 60 * 60 * 24));
+        },
     },
     setup() {
         const data = ref();
