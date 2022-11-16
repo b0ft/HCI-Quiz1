@@ -1,3 +1,4 @@
 # ionic-fishapi
-# ALDY SYACHRANIE
-# 1313621012
+# Aldy Syachranie
+# Kenya Bhanuwati Pranoto
+# Raden Roro Ziva Azzahrah Khalila
