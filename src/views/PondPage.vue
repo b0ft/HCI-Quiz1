@@ -38,17 +38,24 @@
                                     >
                                     <ion-col class="ion-text-end"
                                         ><ion-badge
+                                            v-if="item.isActive"
                                             style="
                                                 background-color: green;
                                                 padding: 0.5rem;
                                                 font-size: 16px;
                                                 border-radius: 10px;
                                             "
-                                            >{{
-                                                item.isActive
-                                                    ? "Aktif"
-                                                    : "Tidak Aktif"
-                                            }}</ion-badge
+                                            >Aktif</ion-badge
+                                        >
+                                        <ion-badge
+                                            v-else
+                                            style="
+                                                background-color: red;
+                                                padding: 0.5rem;
+                                                font-size: 16px;
+                                                border-radius: 10px;
+                                            "
+                                            >Tidak Aktif</ion-badge
                                         ></ion-col
                                     >
                                 </ion-row>
