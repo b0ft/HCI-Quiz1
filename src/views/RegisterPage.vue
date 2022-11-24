@@ -31,7 +31,7 @@
                     <ion-item style="border-radius: 12px; margin-top: 1rem">
                         <ion-input
                             placeholder="Kolam 1"
-                            v-model="nama"
+                            v-model="name"
                         ></ion-input>
                     </ion-item>
                 </div>
@@ -131,13 +131,13 @@ import { defineComponent } from "vue";
 
 // import { Storage } from "@ionic/storage";
 
-// import axios from "axios";
+import axios from "axios";
 
 export default defineComponent({
     name: "HomePage",
     data() {
         return {
-            nama: "",
+            name: "",
             location: "",
             shape: "",
             material: "",
@@ -169,28 +169,22 @@ export default defineComponent({
     methods: {
         testSubmit() {
             let register = {
-                nama: this.nama,
+                name: this.name,
                 location: this.location,
                 shape: this.shape,
                 material: this.material,
             };
 
+            axios
+                .post("http://127.0.0.1:5000/register", register)
+                .then((response) => {
+                    console.log(response);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
             console.log(register);
-            // const store = new Storage();
-            // await store.create();
-            // axios
-            //     .get("http://jft.web.id/fishapi/api/ponds")
-            //     .then(function (response) {
-            //         // handle success
-            //         console.log(response);
-            //     })
-            //     .catch(function (error) {
-            //         // handle error
-            //         console.log(error);
-            //     })
-            //     .finally(function () {
-            //         // always executed
-            //     });
         },
     },
 });
